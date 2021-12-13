@@ -94,7 +94,7 @@ svg#wavyDavy {
 #aboutTopSection {
   position: relative;
   top: 4.5em;
-  width: 98vw;
+  width: 90vw;
   padding: 2%;
   background-color: var(--deedPage-color1);
   border: 5px solid white;
@@ -106,7 +106,8 @@ svg#wavyDavy {
   overflow: hidden;
 }
 #missionTitle {
-  font-size: 40px;
+  font-size: 32px;
+  overflow: hidden;
   background-image: linear-gradient(0deg, var(--deedPage-color5), var(--deedPage-color2), var(--deedPage-color5));
   background-size: 100%;
   background-repeat: repeat;
@@ -114,19 +115,31 @@ svg#wavyDavy {
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--deedPage-color4);
+}
+
+#aboutHeading {
+  font-size: 32px;
+  overflow: hidden;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--deedPage-color4);
 }
 
 #workOnThis {
   overflow: hidden;
   font-style: italic;
-  font-size: 40px;
-  background-image: linear-gradient(0deg, var(--deedPage-color5), var(--deedPage-color2), var(--deedPage-color5));
+  font-size: 25px;
+  height: 60px;
+  background-image: linear-gradient(0deg, var(--deedPage-color5), var(--deedPage-color1), var(--deedPage-color5));
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--deedPage-color9);
 }
 
 #aboutHeading {
@@ -147,15 +160,24 @@ svg#wavyDavy {
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--deedPage-color4);
+  font-size: 32px;
+  overflow: hidden;
+}
+
+a {
+  color: var(--deedPage-color5);
 }
 
 #aboutMiddleSection {
   position: relative;
   top: 10%;
+  padding-top: 10px;
 }
 
 #aboutMiddleSection h1 {
-  font-size: 90px;
+  font-size: 40px;
   background-image: linear-gradient(0deg, var(--deedPage-color5), var(--deedPage-color2), var(--deedPage-color5));
   background-size: 100%;
   background-repeat: repeat;
@@ -167,11 +189,15 @@ svg#wavyDavy {
   -webkit-text-stroke-color: var(--deedPage-color1); 
 }
 
+
+/* This slides up under/over the aboutMiddleSection and MEET THE TEAM title. Probably an easy fix but I can't figure it out. Remember this is mobile styling here. It's not an issue on larger devices.*/
 div#aboutBottomSection {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap-reverse;
   position: relative;
-  top: 10%;
   width: 100%;
   /* overflow: hidden; */
 }
@@ -183,8 +209,8 @@ div#aboutBottomSection {
   display: inline-block;
   margin: auto;
   margin-bottom: 2%;
-  width: 25%;
-  height: 800px;
+  width: 90%;
+  min-height: 800px;
   border: 5px solid var(--deedPage-color5);
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -200,6 +226,8 @@ div#aboutBottomSection {
   width: 100%;
   height: 30%;
   border-bottom: 5px solid white;
+  /* Added the below so Meet Our Team is hidden on scroll on mobile responsiveness. Delete if issue with cards scrolling over "Meet The Team is fixed. */
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #daveCardMiddle {
@@ -213,6 +241,7 @@ div#aboutBottomSection {
   height: 100px;
   width: 100%;
   bottom: 0;
+  padding-top: 10px;
 }
 
 #dcCard {
@@ -222,8 +251,8 @@ div#aboutBottomSection {
   display: inline-block;
   margin: auto;
   margin-bottom: 2%;
-  width: 25%;
-  height: 800px;
+  width: 90%;
+  min-height: 800px;
   border: 5px solid var(--deedPage-color5);
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -243,6 +272,8 @@ div#aboutBottomSection {
   width: 100%;
   height: 30%;
   border-bottom: 5px solid white;
+  /* Added the below so Meet Our Team is hidden on scroll on #daveCardTop and here so they're all alike on mobile responsiveness Delete if issue with cards scrolling over "Meet The Team is fixed. */
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #dcCardBottom {
@@ -252,6 +283,7 @@ div#aboutBottomSection {
   height: 100px;
   width: 100%;
   bottom: 0;
+  padding-top: 10px;
 }
 #jjCard {
   display: flex;
@@ -260,8 +292,8 @@ div#aboutBottomSection {
   display: inline-block;
   margin: auto;
   margin-bottom: 2%;
-  width: 25%;
-  height: 800px;
+  width: 90%;
+  min-height: 800px;
   border: 5px solid var(--deedPage-color5);
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -276,11 +308,13 @@ div#aboutBottomSection {
   width: 100%;
   height: 30%;
   border-bottom: 5px solid white;
+   /* Added the below so Meet Our Team is hidden on scroll on #daveCardTop and here so they're all alike on mobile responsiveness Delete if issue with cards scrolling over "Meet The Team is fixed. */
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #jjCardMiddle {
   text-align: center;
-  line-height: 1.7;
+  line-height: 2;
 }
 
 #jjCardBottom {
@@ -290,6 +324,7 @@ div#aboutBottomSection {
   height: 100px;
   width: 100%;
   bottom: 0;
+  padding-top: 10px;
 }
 
 #photoDave {
@@ -301,6 +336,9 @@ div#aboutBottomSection {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
+#photoDave:hover {
+  border: 5px solid var(--deedPage-color2);
+}
 
 #photoDC {
   position: relative;
@@ -310,6 +348,9 @@ div#aboutBottomSection {
   border-radius: 25px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
+#photoDC:hover {
+  border: 5px solid var(--deedPage-color2);
+}
 #photoJJ {
   position: relative;
   width: 55%;
@@ -318,7 +359,9 @@ div#aboutBottomSection {
   border-radius: 25px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
-
+#photoJJ:hover {
+  border: 5px solid var(--deedPage-color2);
+}
 #mailButton {
   outline: 0;
   border-radius: 25px;
@@ -349,4 +392,143 @@ div#aboutBottomSection {
 #copy a {
   cursor: pointer;
   color: rgb(71, 30, 37);
+}
+
+@media screen and (min-device-width: 360px) and (max-device-width: 925px) {
+  #showDeedButton {
+    font-size: 0.50em;
+}
+
+}
+@media (min-width: 568px) and (orientation: landscape){
+  #aboutTopSection {
+    width: 85vw;
+  }
+  #missionTitle {
+    font-size: 40px;
+  }
+  #aboutHeading {
+    font-size: 40px;
+  }
+  #workOnThis {
+    font-size: 32px;
+  }
+  #howItWorks {
+    font-size: 40px;
+  }
+  #aboutMiddleSection {
+    top: 20%;
+    padding-top: 10px;
+  }
+  #daveCard {
+    width: 65%;
+    min-height: 700px;
+  }
+  #dcCard {
+    width: 65%;
+    min-height: 700px;
+  }
+  #jjCard {
+    width: 65%;
+    min-height: 700px;
+  }
+
+}
+/* NOTE: the above media queries were just for mobile devices landscape orientation, so most needed to be repeated below */
+@media (min-width: 767px){
+  #aboutTopSection {
+    width: 80vw;
+  }
+  #missionTitle {
+    font-size: 50px;
+  }
+  #aboutHeading {
+    font-size: 50px;
+  }
+  #workOnThis {
+    font-size: 50px;
+    background-image: linear-gradient(0deg, var(--deedPage-color5), var(--deedPage-color2), var(--deedPage-color5));
+    -webkit-text-stroke-color: var(--deedPage-color4);
+    }
+  #howItWorks {
+    font-size: 50px;
+  }
+  #aboutMiddleSection {
+    top: 20%;
+  }
+  #aboutMiddleSection h1 {
+    font-size: 70px;
+  }
+  div#aboutBottomSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 20%;
+    width: 100%;
+  }
+  #daveCard {
+    width: 45%;
+    min-height: 750px;
+  }
+  #dcCard {
+    width: 45%;
+    min-height: 750px;
+  }
+  #jjCard {
+    width: 45%;
+    min-height: 750px;
+  } 
+}
+@media (min-width: 992px){
+  #aboutTopSection {
+    padding: 20px 50px;
+  }
+  #aboutMiddleSection {
+    top: 20%;
+    padding-top: unset;
+  }
+  #aboutMiddleSection h1 {
+    font-size: 90px;
+  }
+
+  #daveCard {
+    width: 40%;
+    min-height: 700px;
+  }
+  #dcCard {
+    width: 40%;
+    min-height: 700px;
+  }
+  #jjCard {
+    width: 40%;
+    min-height: 700px;
+  }
+  #daveCardTop {
+    background-color: rgba(255, 255, 255, .2);
+  }
+  #dcCardTop {
+    background-color: rgba(255, 255, 255, .2);
+  }
+  #jjCardTop {
+    background-color: rgba(255, 255, 255, .2);
+  }
+}
+@media (min-width: 1200px){
+  #aboutTopSection {
+    padding: 40px 70px;
+  }
+  #daveCard {
+    width: 30%;
+    height: 800px;
+  }
+  #dcCard {
+    width: 30%;
+    height: 800px;
+  }
+  #jjCard {
+    width: 30%;
+    height: 800px;
+  }
 }

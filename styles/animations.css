@@ -1,86 +1,86 @@
 @keyframes animate-letters {
-  0% {
-      stroke-dashoffset: 600;
-      opacity: -1;
-  }
-  40% {
-      stroke-dashoffset: 600;
-  }
-  75% {
-      opacity: 1;
-  }
-  80% {
-      stroke-dashoffset: 300;
-      opacity: 1;
-      fill: transparent;
-  }
-  100% {
-      stroke-dashoffset: 0;
-      fill: #77afb7;
-  }
+    0% {
+        stroke-dashoffset: 600;
+        opacity: -1;
+    }
+    40% {
+        stroke-dashoffset: 600;
+    }
+    75% {
+        opacity: 1;
+    }
+    80% {
+        stroke-dashoffset: 300;
+        opacity: 1;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #77afb7;
+    }
 }
 
 @keyframes fadein {
-  0% {
-      opacity: 0;
-  }
-  40% {
-      opacity: 0;
-  }
-  80% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes waveAnim{
-  0% {
-    d: path(
-      "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
-    );
-  }
-  25% {
-    d: path(
-      "M0,100 C220,100,440,292,660,292 C880,292,1100,100,1320,192 L1320 500 L0 500"
-    );
-  }
-  50% {
-    d: path(
-      "M0,192 C220,290,440,290,660,192 C880,100,1100,100,1320,192 L1320 500 L0 500"
-    );
-  }
-  75% {
-    d: path(
-      "M0,292 C220,292,440,100,660,100 C880,100,1100,292,1320,292 L1320 500 L0 500"
-    );
-  }
-  100% {
-    d: path(
-      "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
-    );
-  }
+    0% {
+      d: path(
+        "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
+      );
+    }
+    25% {
+      d: path(
+        "M0,100 C220,100,440,292,660,292 C880,292,1100,100,1320,192 L1320 500 L0 500"
+      );
+    }
+    50% {
+      d: path(
+        "M0,192 C220,290,440,290,660,192 C880,100,1100,100,1320,192 L1320 500 L0 500"
+      );
+    }
+    75% {
+      d: path(
+        "M0,292 C220,292,440,100,660,100 C880,100,1100,292,1320,292 L1320 500 L0 500"
+      );
+    }
+    100% {
+      d: path(
+        "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
+      );
+    }
 }
 
 /* deedCard animation */
 @keyframes slidein {
-from {
-    margin-left: 100%;
-    width: 300%;
-}
-to {
-    margin-left: 0%;
-    width: 100%;
-}
+  from {
+      margin-left: 100%;
+      width: 300%;
+  }
+  to {
+      margin-left: 0%;
+      width: 100%;
+  }
 }
 @keyframes moveDeedCardBorder {
-0% {
-  background-position: 0 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-
+  
