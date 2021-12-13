@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your Random Daily Deed (DailyDeed) Options for today. Join the DailyDeed Project. Do random acts of awesome every day. Make the world kinder, brighter, and more joyous." />
+    <meta name="author" content="D. Andrew, D. Bastien, J. Bryant" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/navbar.css " />
+    <link rel="stylesheet" href="styles/colors.css" />
+    <link rel="stylesheet" href="styles/deedCard.css">
+    <title>Your DailyDeed Options</title>
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <a href="index.html" class="home-link">
+          <div class="navbar-logo"></div>
+          The DailyDeed Project
+        </a>
+        <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="deedCard.html">DeedCards</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="share.html">Sharing|Caring</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <main id="mainDeedContainer">
+      <section id="deedCard1" class="deedCard">
+      <div id="deedOption1" class="deedOption">
+        <p class="deed" id="deed1"></p>
+      </div>
+      <div class="deedCover">
+        <div class="centerDeedCover">
+          <b>OPEN FOR YOUR<br><span>DailyDeed</span><br>Option 1</b>
+        </div>
+      </div>
+    </section>
+    <section id="deedCard2" class="deedCard">
+      <div id="deedOption2" class="deedOption">
+        <p class="deed" id="deed2"></p>
+      </div>
+      <div class="deedCover">
+        <div class="centerDeedCover">
+          <b>OPEN FOR YOUR<br><span>DailyDeed</span><br>Option 2</b>
+        </div>
+      </div>
+    </section>
+    <svg id="wavyDavy" viewbox="0 0 1320 500">
+      <path
+        id="wavyDavyPath"
+        width="1000px"
+        d="
+      M0,192 C220,100,440,100,660,192 
+      C880,290,1100,290,1320,192
+      L1320 500 L0 500
+      "
+        fill="#FFFFFF"
+      />
+    </svg>
+  </main>
+<section class="button-form-container">
+  <button class="open-form-button">Click for Good Job Reward</button>
+
+<div id="the-form">
+  <form action="https://formsubmit.co/jessica.bryant@live.com" method="POST" class="form-container">
+    <p>DISCLAIMER: THIS PROJECT IS IN ITS BETA TRIAL & HAS NO MONEY FOR CONTESTS YET!!! We don't have a newsletter right now either. We only have our awesomeness.</p>
+    <hr>
+    <input type="checkbox" name="yesterdayDeed" id="yesterdayCheckbox">
+    <label for="yesterdayCheckbox">Check here if you did a DailyDeed yesterday and you'd like to enter our contest.</label>
+    <hr>
+    <input type="checkbox" name="newsletterCheckbox" id="newsletterCheckbox">
+    <label for="newsletterCheckbox">Check here if you'd like to join our DailyDeed newsletter for info about our project and upcoming contests.</label>
+    <hr>
+    <label for="share">(Optional) Share your DailyDeed picture and/or story. If we decide to place either on our Sharing|Caring page, we will email you for authorization.</label>
+    <input type="file" name="sharePic" id="sharePic">
+    <textarea name="share" id="share" cols="30" rows="5"></textarea>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Name" name="name" required>
+	<br>
+	<label for="email"><b>Е-mail</b></label>
+    <input type="text" placeholder="E-mail" name="email" required>
+    <button type="submit" class="submit-button">Send My Form Please</button>
+  </form>
+</div>
+</section>
+    <footer>
+      <p id="copy">Copyright &copy; 2021 <a href="https://www.linkedin.com/in/davidjandrew" target="_blank">Dave Andrew</a>, <a href="https://www.linkedin.com/in/ddcbastien" target="_blank">DC Bastien</a>, and <a href="https://www.linkedin.com/in/jessicajjbryant" target="_blank">JJ Bryant</a></p>
+  </footer>
+  </body>
+  <script src="Scripts/app.js"></script>
+  <script src="Scripts/navbar.js"></script>
+</html>
+
+

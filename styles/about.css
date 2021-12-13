@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
+
+/* font-family: 'Open Sans', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(var(--deedPage-color2), var(--deedPage-color5), var(--deedPage-color3));
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 70px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;   
+}
+
+
+  
+.work {
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+  .container {
+    padding: 0 16px;
+  }
+  
+  
+  .button {
+    border: none;
+    outline: 0;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color:#86d2d2 ;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  /* Footer Styling */
+  #copy {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  #copy a {
+    cursor: pointer;
+    color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  

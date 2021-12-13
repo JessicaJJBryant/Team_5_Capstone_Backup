@@ -1,0 +1,317 @@
+/*  
+Table of Contents
+10-29 global
+30-139 deed card
+140-159 wavy davy 
+160- form
+copyright
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
+
+/* font-family: 'Open Sans', sans-serif; */
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 120vh;
+  min-width: 100vw;
+  line-height: 1.2;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(var(--deedPage-color2), var(--deedPage-color5), var(--deedPage-color3));
+  background-attachment: fixed;
+}
+
+
+/* Deed Cards */
+#mainDeedContainer {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 64px; 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 90vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.deedCard {
+  position: relative;
+  width: calc(200px + 10vw);
+  height: calc(200px + 10vh);
+  background-color: var(--deedPage-color5);
+  border-width: 8px;
+  border-radius: 20%;
+}
+.deedCard::after {
+  position: absolute;
+  content: '';
+  top: calc(-1 * 8px);
+  left: calc(-1 * 8px);
+  z-index: -1;
+  width: calc(100% + 8px * 2);
+  height: calc(100% + 8px * 2);
+  background: linear-gradient(60deg, var(--deedPage-color1), var(--deedPage-color4), var(--deedPage-color5), var(--deedPage-color2), var(--deedPage-color3), var(--deedPage-color6), var(--deedPage-color7), var(--deedPage-color6));
+  background-size: 300% 300%;
+  border-radius: 20%;
+  animation: moveDeedCardBorder 4000ms alternate infinite;
+}
+
+#deedCard1 {
+  transform: rotate(-2deg);
+}
+#deedCard2 {
+  transform: rotate(2deg);
+}
+
+.deedCard .deedOption {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0, auto;
+  background: linear-gradient(10deg, var(--deedPage-color6), var(--deedPage-color7), var(--deedPage-color6));
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--deedPage-color8);
+  border-radius: 20%;
+  padding: 15px;
+  font-size: calc(.7rem + .7vw);
+}  
+
+.deedCard .deedOption .deed {
+  opacity: .5;
+  transform: translateX(-2.5%);
+}
+.deedCard:hover .deedOption .deed,
+.deedCard:focus .deedOption .deed {
+  transform: translateX(2.5%);
+  margin: 0 auto;
+  width: 100%;
+  opacity: 1;
+  transition: 500ms;
+}
+#deed2 b {
+  padding-top: 10px;
+  color: var(--deedPage-color2);
+}
+.deedCard .deedCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(45deg,var(--deedPage-color3), var(--deedPage-color5), var(--deedPage-color8), var(--deedPage-color2));
+  transition: 500ms;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(0deg);
+  border-radius: 20%;
+}
+.deedCard:hover .deedCover, 
+.deedCard:focus .deedCover {
+  transform: perspective(2000px) rotateY(-90deg);
+}
+.deedCard .deedCover .centerDeedCover {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(var(--deedPage-color6), var(--deedPage-color8), var(--deedPage-color6));
+  top: 50%;
+  transform: translateY(-50%);
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-name: slidein;
+}
+.deedCard .deedCover .centerDeedCover b {
+  color: var(--deedPage-color8);
+  font-size: calc(1rem + 1vw);
+}
+.deedCard .deedCover .centerDeedCover b span {
+  font-size: calc(1.1rem + 1vw);
+  color: var(--deedPage-color6);
+}
+
+
+
+/* WavyDavy */
+svg#wavyDavy {
+  position: fixed;
+  width: 2000px;
+  bottom: -440px;
+  left: -80px;
+  opacity: 30%;
+  z-index: -1;
+  stroke-width: 2px;
+  stroke: var(--deedPage-color9);
+}
+
+#wavyDavyPath {
+  animation: waveAnim 40s ease;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+/* Button and Form */
+.button-form-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  /* background-color: red; */
+}
+.open-form-button {
+  background-color: var(--deedPage-color6);
+  color: var(--deedPage-color8);
+  font-size: calc(.8rem + .8vw);
+  font-weight: bold;
+  padding: calc(.3rem + .3vw);
+  border: 3px solid var(--deedPage-color8);
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+#the-form {
+  display: none;
+  border-radius: 10%;
+  /* z-index: 9; */
+  
+}
+
+.form-container {
+  width: calc(300px + 5vw);
+  height: calc(475px + 5vh);
+  padding: 5%;
+  text-align: center;
+  font-size: calc(.7rem + .7vw);
+  color: var(--deedPage-color5);
+  background-color: var(--deedPage-color7);
+  opacity: 0.9;
+  border: 4px solid var(--deedPage-color2);
+  border-radius: 10%; 
+  position: relative;
+  top: -25px;
+}
+
+.form-container input[type=text] {
+  width: 75%;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background: var(--deedPage-color8);
+}
+
+.form-container input[type=text]:hover,
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+}
+
+.form-container .submit-button {
+  background-color: var(--deedPage-color6);
+  color: var(--deedPage-color5);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+.button-form-container .open-form-button:hover, .open-form-button:focus, .submit-button:hover, .submit-button:focus {
+  opacity: 1;
+}
+.form-container 
+.submit-button:hover, .submit-button:focus {
+  opacity: 1;
+}
+
+
+
+
+/* Footer Styling */
+#copy{
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  color: var(--deedPage-color7);
+}
+#copy a {
+  cursor: pointer;
+  color: var(--deedPage-color7);
+}
+
+@media (min-width: 568px) and (orientation: landscape){
+  body {
+    min-height: 100vh;
+  }
+  #mainDeedContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+  }
+  .deedCard .deedOption {
+    font-size: calc(.6rem + .6vw);
+  }
+  .form-container {
+    width: calc(400px + 5vw);
+    height: calc(475px + 5vh);
+  }
+}
+@media (min-width: 767px){
+  body {
+    min-height: 100vh;
+  }
+  #mainDeedContainer {
+    min-height: 88vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+  }
+  .deedCard {
+    width: calc(225px + 10vw);
+    height: calc(225px + 10vh);
+  }
+  .form-container {
+    width: calc(400px + 7vw);
+    height: calc(500px + 7vh);
+  }
+}
+@media (min-width: 992px){
+  #mainDeedContainer {
+    gap: 15px; 
+  }
+  .deedCard {
+    width: calc(250px + 15vw);
+    height: calc(250px + 15vh);
+  }
+  .form-container {
+    width: calc(400px + 7vw);
+    height: calc(500px + 7vh);
+    font-size: calc(.6rem + .6vw); 
+  }
+}
+@media (min-width: 1200px){
+  #mainDeedContainer {
+    gap: 20px; 
+  }
+  .deedCard {
+    width: calc(300px + 15vw);
+    height: calc(300px + 15vh);
+  }
+}
