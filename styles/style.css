@@ -541,7 +541,6 @@ div#aboutBottomSection {
 }
 @media (min-width: 1400px){
   #aboutTopSection {
-    width: 50vw;
     padding: 50px 100px;
   }
   #daveCard {
@@ -559,7 +558,6 @@ div#aboutBottomSection {
 }
 @media (min-width: 1600px){
   #aboutTopSection {
-    width: 40vw;
     padding: 60px 120px;
   }
 
