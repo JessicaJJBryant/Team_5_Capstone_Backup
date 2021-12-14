@@ -1,12 +1,12 @@
 /*  
 Table of Contents
-10-29 global
-30-139 deed card
-140-159 wavy davy 
-160- form
-copyright
+10-27 global
+30-137 deed card
+140-155 wavy davy 
+160-230 form
+235-245 copyright
+250-end media queries
 */
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap");
 
 /* font-family: 'Open Sans', sans-serif; */
@@ -62,14 +62,12 @@ body {
   border-radius: 20%;
   animation: moveDeedCardBorder 4000ms alternate infinite;
 }
-
 #deedCard1 {
   transform: rotate(-2deg);
 }
 #deedCard2 {
   transform: rotate(2deg);
 }
-
 .deedCard .deedOption {
   position: relative;
   display: flex;
@@ -85,7 +83,6 @@ body {
   padding: 15px;
   font-size: calc(.7rem + .7vw);
 }  
-
 .deedCard .deedOption .deed {
   opacity: .5;
   transform: translateX(-2.5%);
@@ -140,7 +137,6 @@ body {
 }
 
 
-
 /* WavyDavy */
 svg#wavyDavy {
   position: fixed;
@@ -152,12 +148,12 @@ svg#wavyDavy {
   stroke-width: 2px;
   stroke: var(--deedPage-color9);
 }
-
 #wavyDavyPath {
   animation: waveAnim 40s ease;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 
 
 
@@ -182,15 +178,11 @@ svg#wavyDavy {
   cursor: pointer;
   opacity: 0.8;
 }
-
-
 #the-form {
   display: none;
   border-radius: 10%;
-  /* z-index: 9; */
-  
+  /* z-index: 9; */ 
 }
-
 .form-container {
   width: calc(300px + 5vw);
   height: calc(475px + 5vh);
@@ -205,7 +197,6 @@ svg#wavyDavy {
   position: relative;
   top: -25px;
 }
-
 .form-container input[type=text] {
   width: 75%;
   padding: 10px;
@@ -213,12 +204,10 @@ svg#wavyDavy {
   border: none;
   background: var(--deedPage-color8);
 }
-
 .form-container input[type=text]:hover,
 .form-container input[type=text]:focus {
   background-color: #ddd;
 }
-
 .form-container .submit-button {
   background-color: var(--deedPage-color6);
   color: var(--deedPage-color5);
@@ -232,7 +221,6 @@ svg#wavyDavy {
   font-weight: bold;
   border-radius: 50px;
 }
-
 .button-form-container .open-form-button:hover, .open-form-button:focus, .submit-button:hover, .submit-button:focus {
   opacity: 1;
 }
@@ -256,6 +244,10 @@ svg#wavyDavy {
   color: var(--deedPage-color7);
 }
 
+
+
+
+/* Media Queries */
 @media (min-width: 568px) and (orientation: landscape){
   body {
     min-height: 100vh;
