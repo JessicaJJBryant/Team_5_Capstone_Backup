@@ -315,3 +315,9 @@ svg#wavyDavy {
     height: calc(300px + 15vh);
   }
 }
+  @media (min-width: 1600px){
+    .form-container {
+      width: calc(450px + 7vw);
+      height: calc(550px + 7vh);
+    }
+}
